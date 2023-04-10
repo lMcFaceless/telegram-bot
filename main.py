@@ -1,8 +1,11 @@
 import telebot
 from telebot import types
-from philosophers import Philisophers
 
-bot = telebot.TeleBot('5458668855:AAGWvtUKH999Mr9DwNwZaKNqBb3jw6xmTbQ')
+import config
+from philosophers import Philisophers
+from config import token
+
+bot = telebot.TeleBot(config.token)
 
 
 @bot.message_handler(commands=['start'])
